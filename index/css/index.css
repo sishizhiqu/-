@@ -1,0 +1,874 @@
+.wrap .asideBar {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: #7a6e6e;
+  transition: right 0.3s ease-in-out 0s;
+}
+.wrap .asideBar.closed {
+  top: 0px;
+  right: -294px;
+}
+.wrap .asideBar.opened {
+  top: 0;
+  right: 0;
+}
+.wrap .asideBar .content {
+  position: relative;
+  width: 294px;
+  height: 100%;
+  left: 6px;
+  background: bisque;
+  z-index: 4;
+}
+.wrap .asideBar .pullBtn {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  left: -29px;
+  top: 0;
+  cursor: pointer;
+}
+.wrap .asideBar .pullBtn.closed {
+  background: #7a6e6e url("../images/list.png") center center no-repeat;
+  background-size: cover;
+}
+.wrap .asideBar .pullBtn.opened {
+  background: #7a6e6e url("../images/cross.png") center center no-repeat;
+  background-size: cover;
+}
+.wrap .asideBar .toolList {
+  position: absolute;
+  left: -29px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+.wrap .asideBar .toolList .item {
+  position: relative;
+  height: 35px;
+  background: #7a6e6e;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: -1px;
+}
+.wrap .asideBar .toolList .item:first-child span {
+  background: url("../images/toolbars.png") -87px -174px no-repeat;
+}
+.wrap .asideBar .toolList .item:nth-child(2) span {
+  background: url("../images/toolbars.png") -50px 0px no-repeat;
+}
+.wrap .asideBar .toolList .item:nth-child(3) span {
+  background: url("../images/toolbars.png") -50px -100px no-repeat;
+}
+.wrap .asideBar .toolList .item:nth-child(4) span {
+  background: url("../images/toolbars.png") -190px -150px no-repeat;
+}
+.wrap .asideBar .toolList .item:nth-child(5) span {
+  background: url("../images/toolbars.png") -50px -150px no-repeat;
+}
+.wrap .asideBar .toolList .item:last-child span {
+  background: url("../images/toolbars.png") -50px -250px no-repeat;
+}
+.wrap .asideBar .toolList .item span {
+  display: inline-block;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  z-index: 2;
+}
+.wrap .asideBar .toolList .item span.hover {
+  background-color: #B1191A;
+}
+.wrap .asideBar .toolList .item i {
+  display: inline-block;
+  width: 62px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  position: absolute;
+  transition: all 0.3s ease-in-out 0.1s;
+  color: #fff;
+  left: 35px;
+  background: #B1191A;
+  z-index: -1;
+}
+.wrap .asideBar .toolList .item i.hover {
+  left: -62px;
+}
+.wrap .asideBar .backTop {
+  position: absolute;
+  left: -29px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #7a6e6e;
+  bottom: 0;
+  cursor: pointer;
+}
+.wrap .asideBar .backTop span {
+  display: inline-block;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #7a6e6e url("../images/toolbars.png") -50px -250px no-repeat;
+  z-index: 2;
+}
+.wrap .asideBar .backTop span.hover {
+  background-color: #B1191A;
+}
+.wrap .asideBar .backTop i {
+  display: inline-block;
+  width: 62px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  position: absolute;
+  transition: all 0.3s ease-in-out 0.1s;
+  color: #fff;
+  left: 35px;
+  background: #B1191A;
+  z-index: -1;
+}
+.wrap .asideBar .backTop i.hover {
+  left: -62px;
+}
+.wrap .header {
+  width: 100%;
+  *zoom: 1;
+}
+.wrap .header::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .header .top {
+  width: 100%;
+  height: 30px;
+  background: #eaeaea;
+}
+.wrap .header .top .topMain {
+  width: 1200px;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+}
+.wrap .header .top .topMain .login {
+  width: 200px;
+  height: 30px;
+  float: left;
+}
+.wrap .header .top .topMain .login p {
+  float: left;
+}
+.wrap .header .top .topMain .login p a {
+  line-height: 30px;
+}
+.wrap .header .top .topMain .login p a:first-child {
+  margin-left: 3px;
+}
+.wrap .header .top .topMain .topNav {
+  width: 630px;
+  height: 30px;
+  float: right;
+}
+.wrap .header .top .topMain .topNav a {
+  padding: 0 10px;
+}
+.wrap .header .top .topMain .topNav a + a {
+  border-left: 1px solid #b3aeae;
+}
+.wrap .header .bottom .bottomMain {
+  width: 1200px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+.wrap .header .bottom .bottomMain::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .header .bottom .bottomMain .logo {
+  float: left;
+  margin: 25px 45px;
+}
+.wrap .header .bottom .bottomMain .logo img {
+  width: 170px;
+  height: 56px;
+}
+.wrap .header .bottom .bottomMain .search {
+  float: right;
+  margin-top: 35px;
+}
+.wrap .header .bottom .bottomMain .search input {
+  width: 490px;
+  height: 32px;
+  box-sizing: border-box;
+  padding: 0 4px;
+  border: 2px solid #ea4a36;
+  float: left;
+}
+.wrap .header .bottom .bottomMain .search button {
+  width: 68px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  float: left;
+  background: #ea4a36;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.wrap .typeNav {
+  width: 100%;
+  border-bottom: 2px solid #e1251b;
+}
+.wrap .typeNav .typeNavMain {
+  width: 1200px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+.wrap .typeNav .typeNavMain::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .typeNav .typeNavMain h3 {
+  width: 210px;
+  height: 50px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  background: #e1251b;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+}
+.wrap .typeNav .typeNavMain ul {
+  height: 50px;
+  float: left;
+  line-height: 50px;
+}
+.wrap .typeNav .typeNavMain ul li {
+  display: inline-block;
+  margin: 0 22px;
+  font-size: 16px;
+  color: #333;
+}
+.wrap .main {
+  width: 100%;
+}
+.wrap .main .mainCon {
+  width: 1200px;
+  margin: 15px auto 0;
+}
+.wrap .main .mainCon .breadcrumb {
+  padding: 9px 15px 9px 0;
+}
+.wrap .main .mainCon .breadcrumb i {
+  color: #ccc;
+  margin: 0 2px;
+}
+.wrap .main .mainCon .infoWrap {
+  width: 100%;
+  margin: 5px 0 15px;
+  *zoom: 1;
+}
+.wrap .main .mainCon .infoWrap::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap {
+  width: 400px;
+  float: left;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .magnifier {
+  width: 100%;
+  height: 400px;
+  border: 1px solid #DFDFDF;
+  position: relative;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .magnifier .zoomImgBox {
+  position: relative;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .magnifier .zoomImgBox img {
+  width: 100%;
+  height: 100%;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .magnifier .zoomImgBox .mask {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #DFDFDF;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .magnifier .bigImgBox {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  position: absolute;
+  left: 420px;
+  top: 0;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .thumbnail {
+  width: 100%;
+  margin-top: 5px;
+  *zoom: 1;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .thumbnail::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .thumbnail a {
+  width: 10px;
+  height: 54px;
+  border: 1px solid #ccc;
+  background: #ebebeb;
+  float: left;
+  text-align: center;
+  line-height: 54px;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .thumbnail a.prev {
+  margin-right: 4px;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .thumbnail .itemWrap {
+  width: 372px;
+  height: 56px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .thumbnail .itemWrap ul {
+  width: 9999px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .thumbnail .itemWrap ul li {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  padding: 2px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.wrap .main .mainCon .infoWrap .magnifierWrap .thumbnail .itemWrap ul li img {
+  width: 100%;
+  height: 100%;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap {
+  width: 700px;
+  float: right;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop h3 {
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 15px;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop p {
+  color: #e12228;
+  margin-top: 15px;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap {
+  line-height: 28px;
+  background-color: #fee9ec;
+  padding: 7px;
+  margin-top: 10px;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .priceTop {
+  *zoom: 1;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .priceTop::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .priceTop > span {
+  margin-right: 15px;
+  float: left;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .priceTop .price {
+  float: left;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .priceTop .price > span {
+  font-size: 16px;
+  color: #cc1122;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .priceTop .price > em {
+  font-size: 24px;
+  color: #cc1122;
+  font-weight: bolder;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .priceTop .price > i {
+  font-size: 12px;
+  color: #cc1122;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .priceTop .remark {
+  float: right;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .promotionBottom {
+  margin-top: 10px;
+  *zoom: 1;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .promotionBottom::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .promotionBottom > span {
+  float: left;
+  margin-right: 15px;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .promotionBottom .promotionInfo {
+  float: left;
+  width: 520px;
+  line-height: 28px;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .promotionBottom .promotionInfo > i {
+  background: #c81623;
+  padding: 3px;
+  color: #fff;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .priceWrap .promotionBottom .promotionInfo > em {
+  color: #999;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .supportWrap {
+  margin-left: 7px;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 5px;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .supportWrap .area {
+  margin-top: 10px;
+  line-height: 28px;
+  *zoom: 1;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .supportWrap .area::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .supportWrap .area span {
+  margin-right: 15px;
+  float: left;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .textTop .supportWrap .area em {
+  display: block;
+  float: left;
+  width: 520px;
+  color: #999;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .chooseArea {
+  margin-top: 10px;
+  line-height: 28px;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .chooseArea .choosed mark {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: snow;
+  border: 1px solid #ddd;
+  padding: 0 20px;
+  margin-right: 20px;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .chooseArea .choosed mark a {
+  color: red;
+  margin-left: 20px;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .chooseArea > dl {
+  margin: 13px 0;
+  *zoom: 1;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .chooseArea > dl::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .chooseArea > dl dt {
+  float: left;
+  margin-right: 15px;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .chooseArea > dl dd {
+  float: left;
+  color: #666;
+  margin-right: 5px;
+  line-height: 24px;
+  padding: 2px 14px;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  cursor: pointer;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .chooseArea > dl dd.active {
+  color: #e1251b;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .cartWrap {
+  *zoom: 1;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .cartWrap::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .cartWrap .numCtrl {
+  float: left;
+  width: 55px;
+  margin-right: 15px;
+  position: relative;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .cartWrap .numCtrl input {
+  width: 38px;
+  height: 37px;
+  line-height: 37px;
+  border: 1px solid #eee;
+  color: #555;
+  text-align: center;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .cartWrap .numCtrl > a {
+  position: absolute;
+  width: 15px;
+  height: 19px;
+  line-height: 18px;
+  background: #f1f1f1;
+  color: #666;
+  text-align: center;
+  border: 1px solid #dcdcdc;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .cartWrap .numCtrl > a.plus {
+  right: 0;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .cartWrap .numCtrl > a.minus {
+  right: 0;
+  top: 19px;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .cartWrap .addCart {
+  float: left;
+  padding: 0 25px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 16px;
+  background: #e1251b;
+}
+.wrap .main .mainCon .infoWrap .detailsWrap .chooseBottom .cartWrap .addCart a {
+  color: #fff;
+}
+.wrap .main .mainCon .proDetailWrap {
+  width: 1200px;
+  margin: 30px auto 0;
+  *zoom: 1;
+}
+.wrap .main .mainCon .proDetailWrap::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .proDetailWrap aside {
+  width: 210px;
+  border: 1px solid #ccc;
+  float: left;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabWrap {
+  height: 40px;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabWrap h4 {
+  height: 40px;
+  line-height: 37px;
+  border-top: 1px solid #fff;
+  width: 105px;
+  border-bottom: 3px solid #ccc;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabWrap h4.active {
+  border-top: 3px solid #e1251b;
+  border-bottom: 1px solid #fff;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent {
+  padding: 10px;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent > div {
+  display: none;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent > div.active {
+  display: block;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent .partList {
+  *zoom: 1;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent .partList::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent .partList li {
+  width: 50%;
+  float: left;
+  line-height: 28px;
+  border-bottom: 1px dashed #ededed;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent .goodsList li {
+  margin: 5px 0 15px;
+  border-bottom: 1px solid #ededed;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent .goodsList li .imgWrap {
+  text-align: center;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent .goodsList li .imgWrap img {
+  width: 152px;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent .goodsList li .goodsPrice {
+  font-size: 16px;
+  color: #c81623;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent .goodsList li .cartBtn {
+  margin: 5px auto;
+  text-align: center;
+}
+.wrap .main .mainCon .proDetailWrap aside .tabContent .goodsList li .cartBtn a {
+  color: #8c8c8c;
+  border: 1px solid #8c8c8c;
+  padding: 2px 14px;
+  line-height: 18px;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail {
+  float: right;
+  width: 980px;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .proIntro .tabTitle {
+  *zoom: 1;
+  background: #ededed;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .proIntro .tabTitle::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .proIntro .tabTitle li {
+  float: left;
+  border: 1px solid #ddd;
+  background: #fff;
+  height: 40px;
+  padding: 0 11px;
+  text-align: center;
+  line-height: 40px;
+  border-right: none;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .proIntro .tabTitle li.active {
+  background: #e1251b;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .proIntro .tabTitle li.active a {
+  color: #fff;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .proIntro .tabPanel > li {
+  display: none;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .proIntro .tabPanel > li.active {
+  display: block;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .proIntro .tabPanel > li .goods-intro li {
+  margin: 10px 0;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting {
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting h4 {
+  padding: 5px 0 5px 15px;
+  background: #f1f1f1;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet {
+  height: 170px;
+  padding-top: 10px;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet div {
+  float: left;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .master {
+  width: 127px;
+  height: 165px;
+  position: relative;
+  text-align: center;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .master img {
+  width: 87px;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .master p {
+  color: #c81623;
+  font-weight: bolder;
+  font-size: 16px;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .master i {
+  position: absolute;
+  font-size: 16px;
+  top: 48px;
+  right: -25px;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .suits {
+  width: 668px;
+  height: 165px;
+  *zoom: 1;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .suits::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .suits .item {
+  text-align: center;
+  width: 127px;
+  margin: 0 20px;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .suits .item img {
+  width: 120px;
+  height: 130px;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .result {
+  border-left: 1px solid #ddd;
+  width: 153px;
+  height: 165px;
+  padding-left: 20px;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .result p:first-child {
+  margin: 10px 0;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .result p:nth-child(2) {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .result .packPrice {
+  color: #B1191A;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .result .addCart {
+  display: block;
+  padding: 10px 25px ;
+  font-size: 16px;
+  color: #fff;
+  background: #e1251b;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.wrap .main .mainCon .proDetailWrap .proDetail .fitting .goodsSet .result .addCart:active {
+  transform: scale(0.98);
+  box-shadow: 5px 5px 5px rgba(238, 142, 142, 0.3);
+}
+.wrap .main .mainCon .guessLike {
+  width: 1198px;
+  border: 1px solid #ddd;
+}
+.wrap .main .mainCon .guessLike h4 {
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  padding: 5px 10px;
+  background: #f1f1f1;
+}
+.wrap .main .mainCon .guessLike .proLike {
+  padding: 15px 11px;
+  *zoom: 1;
+}
+.wrap .main .mainCon .guessLike .proLike::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap .main .mainCon .guessLike .proLike .item {
+  float: left;
+  width: 196px;
+}
+.wrap .main .mainCon .guessLike .proLike .item img {
+  width: 167px;
+  height: 123px;
+}
+.wrap .main .mainCon .guessLike .proLike .item div {
+  padding: 0 15px;
+}
+.wrap .main .mainCon .guessLike .proLike .item p {
+  padding: 0 15px;
+  color: #c81623;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.wrap .main .mainCon .guessLike .proLike .item i {
+  padding: 0 15px;
+}
+.wrap footer {
+  margin-top: 20px;
+  background: #eaeaea;
+  width: 100%;
+}
+.wrap footer .footerWrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.wrap footer .footerWrap .top {
+  padding: 20px;
+  border-bottom: 1px solid #e4e1e1;
+  *zoom: 1;
+}
+.wrap footer .footerWrap .top::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap footer .footerWrap .top dl {
+  float: left;
+  width: 16.66666%;
+  line-height: 18px;
+}
+.wrap footer .footerWrap .top dl dt {
+  font-size: 14px;
+  font-weight: bold;
+}
+.wrap footer .footerWrap .bottom {
+  padding: 20px;
+  text-align: center;
+}
+.wrap footer .footerWrap .bottom ul {
+  width: 700px;
+  margin: 0 auto 10px;
+  *zoom: 1;
+}
+.wrap footer .footerWrap .bottom ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap footer .footerWrap .bottom ul li {
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid;
+}
+.wrap footer .footerWrap .bottom ul li:last-child {
+  border-right: none;
+}
+.wrap footer .footerWrap .bottom p {
+  margin-bottom: 10px;
+}
